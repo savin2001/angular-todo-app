@@ -19,7 +19,7 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     // Values of the array are passed as follows
-    this.todos = [];
+    this.todos = []; 
   }
 
   // Toggles the task to be done if completed and vice versa
