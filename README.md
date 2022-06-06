@@ -4,7 +4,7 @@ This project is a simple Todo app created using Angular. The main aim of this pr
 
 ## Live site
 
-Click ths [link]() to check out and play with the Angular Todo App.
+Click ths [link](https://simple-angular-todo-app.netlify.app/) to check out and play with the Angular Todo App.
 
 ## Development server
 
