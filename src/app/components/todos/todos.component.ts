@@ -25,6 +25,7 @@ export class TodosComponent implements OnInit {
         completed: false,
       },
     ];
+    localStorage.setItem('myTodos', JSON.stringify(this.todos));
   }
 
   // Toggles the task to be done if completed and vice versa
