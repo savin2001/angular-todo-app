@@ -9,6 +9,10 @@ import { Todo } from './../../models/Todo';
 export class TodosComponent implements OnInit {
   // This is a declaration of an array todos made up of objects called Todo
   todos!: Todo[];
+
+  // This is the input value
+  inputTodo: string = '';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -36,7 +40,15 @@ export class TodosComponent implements OnInit {
 
   // Deleting the todo
   deleteTodo(id: number) {
-    this.todos = this.todos.filter((value, index) => index !== id )
+    this.todos = this.todos.filter((value, index) => index !== id);
   }
 
+  // Adding new todo to the todos array
+  addTodo() {
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false,
+    });
+    this.inputTodo = ''
+  }
 }
