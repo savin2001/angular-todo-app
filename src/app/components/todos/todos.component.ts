@@ -35,5 +35,5 @@ export class TodosComponent implements OnInit {
   }
 
   // Deleting the todo
-  
+
 }
