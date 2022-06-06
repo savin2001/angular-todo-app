@@ -7,7 +7,7 @@
       placeholder="Enter your todo here... "
       [(ngModel)]="inputTodo"
     />
-    <input type="submit" value="Add todo" class="todo-submit" />
+    <input type="submit" value={{submitTodo}} class="todo-submit" name="submitTodo" [(ngModel)]="submitTodo" />
   </form>
   <div
     *ngFor="let todo of todos; let i = index"

@@ -13,6 +13,8 @@ export class TodosComponent implements OnInit {
   // This is the input value
   inputTodo: string = '';
 
+  submitTodo: string = 'Add todo';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -45,10 +47,14 @@ export class TodosComponent implements OnInit {
 
   // Adding new todo to the todos array
   addTodo() {
-    this.todos.push({
-      content: this.inputTodo,
-      completed: false,
-    });
-    this.inputTodo = ''
+    if (this.inputTodo !== '') {
+      this.todos.push({
+        content: this.inputTodo,
+        completed: false,
+      });
+      this.inputTodo = '';
+    } else {
+      this.submitTodo = 'Enter valid input';
+    }
   }
 }
