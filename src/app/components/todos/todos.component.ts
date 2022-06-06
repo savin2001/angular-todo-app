@@ -20,7 +20,7 @@ export class TodosComponent implements OnInit {
       },
       {
         content: 'Second todo',
-        completed: true,
+        completed: false,
       },
     ];
   }
@@ -35,5 +35,8 @@ export class TodosComponent implements OnInit {
   }
 
   // Deleting the todo
+  deleteTodo(id: number) {
+    this.todos = this.todos.filter((value, index) => index !== id )
+  }
 
 }
